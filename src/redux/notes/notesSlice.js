@@ -28,7 +28,11 @@ export const notesSlice = createSlice({
                         color:"bg-purple"
                   }],
       },
-      reducers:{},
+      reducers:{
+            addNote: (state,action) => {
+                  state.items.push(action.payload)
+            }
+      },
 });
-
+export const {addNote} = notesSlice.actions;
 export default notesSlice.reducer;
