@@ -17,7 +17,7 @@ function Search() {
   return (
     <div className="row x_center y_center mt_5px">
       <form className="x_center" onSubmit={handleSubmit}>
-      <input type="text" className="search" value={filter} placeholder="Search" onChange={(e) => setFilter(e.target.value)} />
+      <input type="text" className="search" value={filter} placeholder="Search" onChange={(e) => setFilter(e.target.value)} onKeyUp={handleSubmit}/>
       <button className="search">Ara</button>
       </form>
     </div>
