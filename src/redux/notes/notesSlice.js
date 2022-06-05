@@ -31,8 +31,20 @@ export const notesSlice = createSlice({
       reducers:{
             addNote: (state,action) => {
                   state.items.push(action.payload)
+            },
+            toggle: (state,action) => {
+                  const {id} = action.payload;
+                  const item = state.items.find(item => item.id === id);
+                  if(item.status ==="Added"){
+                        item.status = "Keep";
+                  }else if(item.status === "Keep"){
+                        item.status = "Completed";
+                  }else{
+                        const filtered =state.items.filter((item)=> item.id !== id );
+                        state.items = filtered;
+                  }
             }
       },
 });
-export const {addNote} = notesSlice.actions;
+export const {addNote,toggle} = notesSlice.actions;
 export default notesSlice.reducer;

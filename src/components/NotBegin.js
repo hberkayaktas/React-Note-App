@@ -1,7 +1,9 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { toggle } from "../redux/notes/notesSlice";
 
 function NotBegin() {
+      const dispactch = useDispatch();
   const items = useSelector((state) =>
     state.notes.items.filter((item) => item.status === "Added")
   );
@@ -14,7 +16,7 @@ function NotBegin() {
         {items.map((item) => (
           <div key={item.id}  className={`${item.color} p_4 w_75 mx_25 mb_5px card`}>
             {item.content}
-            <button className="btn_status">
+            <button className="btn_status" onClick={() => dispactch(toggle({ id: item.id }))}>
               <i className="fa-solid fa-circle-dot" />
             </button>
           </div>
