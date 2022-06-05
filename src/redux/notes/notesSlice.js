@@ -5,28 +5,35 @@ export const notesSlice = createSlice({
       initialState:{
             items:[{
                         id:1,
-                        content:"1Lorem impsum dolor sit amet",
+                        content:"1 Lorem impsum dolor sit amet",
                         status:"Added",
                         color:"bg-blue"
                   },
                   {
                         id:2,
-                        content:"2Lorem impsum dolor sit amet",
+                        content:"2 Lorem impsum dolor sit amet",
                         status:"Added",
                         color:"bg-pink"
                   },
                   {
+                        id:5,
+                        content:"5 Lorem impsum dolor sit amet",
+                        status:"Added",
+                        color:"bg-green"
+                  },
+                  {
                         id:3,
-                        content:"3Lorem impsum dolor sit amet",
+                        content:"3 Lorem impsum dolor sit amet",
                         status:"Keep",
                         color:"bg-orange"
                   },
                   {
                         id:4,
-                        content:"4Lorem impsum dolor sit amet",
+                        content:"4 Lorem impsum dolor sit amet",
                         status:"Completed",
                         color:"bg-purple"
                   }],
+            activeFilter:'',
       },
       reducers:{
             addNote: (state,action) => {
@@ -43,8 +50,11 @@ export const notesSlice = createSlice({
                         const filtered =state.items.filter((item)=> item.id !== id );
                         state.items = filtered;
                   }
-            }
+            },
+            changeActiveFilter : (state,action)=>{
+                  state.activeFilter = action.payload;
+            },
       },
 });
-export const {addNote,toggle} = notesSlice.actions;
+export const {addNote,toggle,changeActiveFilter} = notesSlice.actions;
 export default notesSlice.reducer;
