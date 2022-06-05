@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+body {
+  background: #eaeaea;
+  font-family: 'Roboto', sans-serif;
+  color:#535353;
+}
+h2{
+  opacity: 1;
+}
+h3{
+  border-bottom: 5px solid;
+  margin-bottom: 10px;
+}
+label {
+  width: 25px;
+  height: 25px;
+  background: #000000;
+  position: absolute;
+  border-radius: 50%;
+  left: -50%;
+  top: -25%;
+  z-index: -1;
+  border: 1px solid #00000025;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.colorpicker {
+  width: 50px;
+  position: relative;
+  margin-right: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  position: relative;
+  width: 500px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.note_input{
+  align-items: flex-start;
+}
+.search{
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #00000050;
+  border-radius: 18px;
+}
+.note_input > textarea{
+  background: #ffffff;
+  border: 1px solid #00000050;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  transition: .5s all;
+  width: 100%;
+  box-shadow: 6px 6px 20px 0px #c3c1c1;
+}
+.colordot{
+  bottom: 25px;
+  left: 15px;
+  position: absolute;
+  z-index: 1;
+}
+.btn{
+  right: 10px;
+  position: absolute;
+  bottom: 10px;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #00000050;
+  border-radius: 5px;
+  margin-left: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  background: #44c767;
+  text-transform: uppercase;
+}
+.btn:hover{
+  opacity: .75;
+}
+.btn:active{
+  opacity: 1;
+}
+.card{
+  position: relative;
+}
+.btn_status{
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  font-size: 25px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  cursor: pointer;
+}
+.btn_status:hover{
+  opacity: .5;
+}
+.btn_status i{
+  width: 25px;
+  height: 25px;
+
+}
+.keep{
+  animation: rotate360 infinite 1s linear;
+}
+@keyframes rotate360{
+  100%{
+        transform: rotate(360deg); 
+  }
+}
+.bg-blue {
+  background: #4fc3f7;
 }
 
-.App-link {
-  color: #61dafb;
+.bg-orange {
+  background: #ffd54f !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-purple {
+  background: #ba68c8;
+}
+
+.bg-pink {
+  background: #f06292;
+}
+
+.bg-green {
+  background: #aed581;
 }

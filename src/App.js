@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./placement.css";
+
+//component
+import Navbar from "./components/Navbar";
+import Search from "./components/Search";
+import NoteForm from "./components/NoteForm";
+import NotBegin from "./components/NotBegin";
+import Begin from "./components/Begin";
+import Completed from "./components/Completed";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Navbar />
+      <Search />
+      <NoteForm />
+      <div className="row mt_5px">
+        <div className="col_md x_center">
+            <NotBegin/>
+            <Begin/>
+            <Completed/>
+        </div>
+      </div>
     </div>
   );
 }
