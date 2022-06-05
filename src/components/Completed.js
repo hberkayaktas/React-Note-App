@@ -12,7 +12,7 @@ function Completed() {
 
       <div className="col w_100 x_center">
         {items.map((item) => (
-          <div className="bg-green p_4 w_75 mx_25 mb_5px card">
+          <div key={item.id}  className={`${item.color} p_4 w_75 mx_25 mb_5px card`}>
             {item.content}
             <button className="btn_status">
               <i className="fa-solid fa-circle-check" />

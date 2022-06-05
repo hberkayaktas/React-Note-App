@@ -116,20 +116,25 @@ form {
 }
 .bg-blue {
   background: #4fc3f7;
+  color:#ffffff;
 }
 
 .bg-orange {
   background: #ffd54f !important;
+  
 }
 
 .bg-purple {
   background: #ba68c8;
+  color:#ffffff;
 }
 
 .bg-pink {
   background: #f06292;
+  color:#ffffff;
 }
 
 .bg-green {
   background: #aed581;
+  color:#ffffff;
 }

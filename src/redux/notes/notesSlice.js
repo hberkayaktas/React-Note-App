@@ -6,22 +6,26 @@ export const notesSlice = createSlice({
             items:[{
                         id:1,
                         content:"1Lorem impsum dolor sit amet",
-                        status:"Added"
+                        status:"Added",
+                        color:"bg-blue"
                   },
                   {
                         id:2,
                         content:"2Lorem impsum dolor sit amet",
-                        status:"Added"
+                        status:"Added",
+                        color:"bg-pink"
                   },
                   {
                         id:3,
                         content:"3Lorem impsum dolor sit amet",
-                        status:"Keep"
+                        status:"Keep",
+                        color:"bg-orange"
                   },
                   {
                         id:4,
                         content:"4Lorem impsum dolor sit amet",
-                        status:"Completed"
+                        status:"Completed",
+                        color:"bg-purple"
                   }],
       },
       reducers:{},
